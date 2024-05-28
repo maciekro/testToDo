@@ -9,4 +9,7 @@ describe('toDo app', () => {
 		cy.get('[data-testid="text-input"]').type(`${randomText}{enter}`)
 		cy.get('[data-testid="todo-item-label"]').invoke('text').should('eq', randomText)
 	})
+	it('editing already existing task', () => {
+		cy.visit('https://todomvc.com/examples/react/dist/')
+	})
 })
