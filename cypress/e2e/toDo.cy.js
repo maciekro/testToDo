@@ -36,7 +36,7 @@ describe('toDo app', () => {
 		cy.get(':nth-child(1) > a').click()
 		cy.get('.view').should('not.have.css', 'text-decoration', 'line-through')
 	})
-	it.only('delete all completed task', () => {
+	it('delete all completed task', () => {
 		const randomText = Math.random().toString(36).substring(2, 12)
 		cy.get('[data-testid="text-input"]').type(`${randomText}{enter}`)
 		cy.get('[data-testid="text-input"]').type(`${randomText}{enter}`)
